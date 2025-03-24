@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #1aff4e;
+  background: #9467e3;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2280,6 +2280,15 @@ embed {
 }
 .custom-logo .site-title a {
   border: 0;
+}
+.custom-text {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 16px;
+  color: #333;
+  font-style: italic;
+  text-align: right;
 }
 .custom-logo-image {
   background: #fff;
