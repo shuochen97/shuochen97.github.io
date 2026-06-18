@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fff;
+  background: #3dff3e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2448,4 +2448,27 @@ samp,
 .highlight .gutter,
 .highlight .code {
   font-family: "JetBrains Mono", Menlo, Consolas, "Courier New", monospace;
+}
+.post-body p,
+.post-body li,
+.post-body blockquote p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.post-body code,
+.post-body pre,
+.post-body kbd,
+.post-body samp,
+.post-body .highlight,
+.post-body .highlight * {
+  hyphens: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  text-align: initial;
 }
