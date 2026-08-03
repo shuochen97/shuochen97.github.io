@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#f7f6f2"/>
+  <text
+    x="256"
+    y="354"
+    fill="#315d68"
+    font-family="New York, Source Serif 4, Georgia, serif"
+    font-size="280"
+    font-weight="600"
+    letter-spacing="4"
+    text-anchor="middle"
+  >SC</text>
+</svg>
