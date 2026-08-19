@@ -356,31 +356,28 @@ td {
   margin-top: 3px;
 }
 .toggle.toggle-arrow .toggle-line-first {
-  left: 50%;
   top: 2px;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
   width: 50%;
 }
 .toggle.toggle-arrow .toggle-line-middle {
-  left: 2px;
   width: 90%;
 }
 .toggle.toggle-arrow .toggle-line-last {
-  left: 50%;
   top: -2px;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   width: 50%;
 }
 .toggle.toggle-close .toggle-line-first {
-  transform: rotate(-45deg);
   top: 5px;
+  transform: rotate(-45deg);
 }
 .toggle.toggle-close .toggle-line-middle {
   opacity: 0;
 }
 .toggle.toggle-close .toggle-line-last {
-  transform: rotate(45deg);
   top: -5px;
+  transform: rotate(45deg);
 }
 .highlight,
 pre {
@@ -1168,7 +1165,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #12ff16;
+  background: #4742b1;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2368,10 +2365,24 @@ embed {
   display: inline-block;
 }
 .sidebar {
-  left: -320px;
+  right: -320px;
 }
 .sidebar.sidebar-active {
-  left: 0;
+  right: 0;
+}
+.sidebar-toggle,
+.back-to-top {
+  left: auto;
+  right: 30px;
+}
+@media (max-width: 991px) {
+  .sidebar-toggle,
+  .back-to-top {
+    right: 20px;
+  }
+}
+.book-mark-link {
+  left: 30px;
 }
 .sidebar {
   width: 320px;
@@ -2732,6 +2743,63 @@ body {
 .sidebar-toggle,
 #sidebar-dimmer {
   display: none !important;
+}
+@media (min-width: 1180px) {
+  .sidebar {
+    background: transparent;
+    bottom: auto;
+    box-shadow: none;
+    display: block !important;
+    left: calc(50% + 410px) !important;
+    right: 24px !important;
+    top: 3rem;
+    width: auto;
+  }
+  .sidebar-inner {
+    color: var(--blog-ink-faint);
+    padding: 0;
+    text-align: left;
+  }
+  .sidebar-nav,
+  .site-overview-wrap {
+    display: none !important;
+  }
+  .post-toc-wrap.sidebar-panel {
+    display: block;
+    max-height: calc(100vh - 6rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .post-toc {
+    border-left: 1px solid var(--blog-line);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 0.72rem;
+    opacity: 1 !important;
+    padding: 0.15rem 0 0.15rem 1rem;
+    transform: none !important;
+  }
+  .post-toc ol {
+    padding-left: 0;
+  }
+  .post-toc .nav-child {
+    padding-left: 0.8rem;
+  }
+  .post-toc .nav-item {
+    line-height: 1.55;
+    margin: 0 0 0.7rem;
+  }
+  .post-toc .nav-link {
+    border-bottom: 0;
+    color: var(--blog-ink-faint);
+    display: block;
+    transition: color 0.2s ease;
+  }
+  .post-toc .nav-link:hover,
+  .post-toc .active > .nav-link,
+  .post-toc .active-current > .nav-link {
+    border-bottom: 0;
+    color: var(--blog-accent);
+  }
 }
 .back-to-top {
   background: rgba(247,246,242,0.94);
